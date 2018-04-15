@@ -18,4 +18,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 Route::get('search', 'SearchController@search');
+Route::get('track/{track_id}', 'SearchController@getTrack');
+
 

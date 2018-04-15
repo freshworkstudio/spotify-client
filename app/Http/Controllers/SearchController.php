@@ -35,4 +35,9 @@ class SearchController extends Controller
 
         return $tracks;
     }
+
+    public function getTrack($id, MusicSearchInterface $musicSearch)
+    {
+        return $musicSearch->getTrack($id);
+    }
 }

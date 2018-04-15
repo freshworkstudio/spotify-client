@@ -6,4 +6,6 @@ interface MusicSearchInterface
     public function search($query);
 
     public function charts($country);
+
+    public function getTrack($id);
 }

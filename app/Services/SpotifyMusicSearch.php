@@ -54,4 +54,12 @@ class SpotifyMusicSearch implements MusicSearchInterface
         return $tracks;
 
     }
+    /**
+     * @param $id
+     * @return array|object
+     */
+    public function getTrack($id)
+    {
+        return collect($this->api->getTrack($id))->toArray();
+    }
 }
