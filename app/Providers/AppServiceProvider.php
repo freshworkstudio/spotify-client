@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Contracts\MusicSearchInterface;
+use App\Services\SpotifyMusicSearch;
 use Illuminate\Support\ServiceProvider;
 use SpotifyWebAPI\Session;
 use SpotifyWebAPI\SpotifyWebAPI;
@@ -25,6 +27,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+        app()->bind(MusicSearchInterface::class, SpotifyMusicSearch::class);
+
         app()->bind(SpotifyWebAPI::class, function() {
             $token = cache()->remember('spotify_token', 50, function() {
                 $session = new Session(

@@ -39,6 +39,8 @@ return [
         'client_id' => env('SPOTIFY_CLIENT_ID'),
         'client_secret' => env('SPOTIFY_CLIENT_SECRET'),
         'redirect_url' => env('SPOTIFY_REDIRECT_URL'),
+        'charts_user' => env('SPOTIFY_CHARTS_USER'),
+        'charts_playlist' => env('SPOTIFY_CHARTS_PLAYLIST'),
     ]
 
 ];
